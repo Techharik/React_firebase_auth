@@ -2,16 +2,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import myContext from '../context/context'
 import Axios from 'axios'
+import Repository from './repository'
 
 
 function Home() {
   const context = useContext(myContext)
-  const [gituser,setGituser] =useState([])
-
+  const [gituser,setGituser] =useState('')
+  const [info,setInfo] =useState([])
 
 const fetchUser = async ()=>{
     const {data} =await Axios.get(`https://api.github.com/users/${gituser}`)
-    console.log(data)
+    setInfo(data)
 }
 
 
@@ -26,6 +27,16 @@ const fetchUser = async ()=>{
           
           />
           <button onClick={fetchUser}>Fetch</button>
+
+        {info.length != 0 ?
+         <div className='flex'>
+        <img src={info.avatar_url}/>
+        <div>
+          <Repository url={info.repos_url} />
+        </div>
+        </div>:null
+
+}
         </>
         
         

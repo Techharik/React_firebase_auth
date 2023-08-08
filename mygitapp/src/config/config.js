@@ -1,10 +1,10 @@
-export default { //wrong info
-  apiKey: "AIzaSyAZmJMLaudgj9QLHVGajvb-J7joXKXYT7cg",
-  authDomain: "mygitapp-e0a58.firebaseapp.com",
-  projectId: "mygitapcp-e0a58",
-  storageBucket: "mygitappc-e0a58.appspot.com",
-  messagingSenderId: "72550795392c",
-  appId: "1:72550795392:web:707eeb021c6cb0404c57e65",
-  measurementId: "G-LQ1RYMNcG3P"
+export default {
+  apiKey: "AIzaSyAZmJMLadssudgj9QLHVGajvb-J7joXKXYT7g",
+  authDomain: "mygitapp-dsd.firebaseapp.com",
+  projectId: "mygitapp-esd0a58",
+  storageBucket: "sd-e0a58.appspot.com",
+  messagingSenderId: "725sd50795392",
+  appId: "1:72550795392:sdweb:707eeb021c6b0404c57e65",
+  measurementId: "G-sd"
 };
 

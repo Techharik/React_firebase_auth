@@ -35,7 +35,7 @@ function Signup() {
        signUpUser()
     }
 
-    console.log('-',context)
+  
     useEffect(() => {
         if(context.user?.uid){
             return navigate("/");
