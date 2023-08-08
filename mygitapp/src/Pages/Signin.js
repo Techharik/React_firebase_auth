@@ -46,17 +46,17 @@ function Signin() {
    
 
     return (
-    <div>
-        <form onSubmit={handleformS} >
-            <input type='email' name='email'
+    <div className='flex justify-center py-12'>
+        <form onSubmit={handleformS} className='flex flex-col '>
+            <input type='email' name='email' className='border  border-2 w-64 border-slate-900 bg-green-100'
             value={email}
              onChange={(e)=>setEmail(e.target.value)}
             />
-            <input type='text' name='password' 
+            <input type='text' name='password' className='border border-2 w-64 border-slate-900 bg-green-100 my-2' 
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />
-            <input type='submit' />
+            <input type='submit' value='Signin'/>
         </form>
     </div>
   )
