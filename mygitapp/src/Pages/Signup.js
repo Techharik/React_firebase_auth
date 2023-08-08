@@ -3,7 +3,7 @@ import React,{useContext,useState,useEffect} from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import myContext from '../context/context';
 
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Home from './Home';
 
 
