@@ -1,42 +1,55 @@
 import React, { useState } from "react";
 import myContext from "./context/context";
-
+//router:
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 //components
 import Home from "./Pages/Home";
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
 import PageNotFound from "./Pages/PageNotFound";
 
-//firebase:
+
 import { initializeApp } from "firebase/app";
 
-// toastify:
-import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css;'
+import firebaseConfig from './config/config'
 
-//router:
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+console.log(firebaseConfig)
+
+const app = initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
 
 function App() {
   const [user,setUser] = useState(null)
+
   return (
     <>
   
 
 
+
+ 
+  <myContext.Provider value={{user, setUser}}>
+
+
 <Router>
 
-  <ToastContainer />
- 
-    <myContext.Provider value={{user,setUser}} />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/signin" element={<Signin />}/>
           <Route path="/signup" element={<Signup />}/>
-          <Route path="/*" element={<PageNotFound />}/>
+          <Route path="*" element={<PageNotFound />}/>
         </Routes>
-    <myContext.Provider /> 
-</Router>
+        </Router>
+        </myContext.Provider>
+
 </>
   );
 }
