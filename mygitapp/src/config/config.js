@@ -1,4 +1,4 @@
-export default {
+export default {//update your own keys
   apiKey: "AIzaSyAZmJMLadssudgj9QLHVGajvb-J7joXKXYT7g",
   authDomain: "mygitapp-dsd.firebaseapp.com",
   projectId: "mygitapp-esd0a58",
